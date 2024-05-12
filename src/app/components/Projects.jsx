@@ -29,6 +29,15 @@ export default function ProjectsPage() {
             redirect: '/projects/bloodbuddy',
             content: 'Connecting donors with recipients, the platform simplifies the process of giving the gift of life. Join in saving lives, one donation at a time.'
         },
+        {
+            topic: 'Adventour',
+            imageLink: '/Adventour/home.png',
+            alttext: 'Blood Buddy',
+            class: 'md:w-[30dvw] w-[60dvw]',
+            heading: 'Tours and Travels Website',
+            redirect: '/projects/adventour',
+            content: 'Adventour is a tours and travels website which allows users to enjoy their weekends or any other occasions at their preferred destinations.'
+        },
     ];
 
 

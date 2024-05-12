@@ -9,7 +9,7 @@ export default function HomePage() {
                         Redhood
                     </div>
 
-                    <div className="font-bold text-xl uppercase">Technical Architect</div>
+                    <div className="font-bold text-xl uppercase">System Architect</div>
 
                     <div className="mt-6 flex gap-8">
                         <Link 
