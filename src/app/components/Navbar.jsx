@@ -16,9 +16,9 @@ const Navbar = () => {
     const navItems = [
         { id: 1, text: 'Home', link: '/' },
         { id: 2, text: 'Projects', link: '/#projects' },
-        { id: 3, text: 'Skills', link: '/skills' },
-        { id: 4, text: 'About', link: '/about' },
-        { id: 5, text: 'Contact', link: '/contact' },
+        { id: 3, text: 'Skills', link: '/#skills' },
+        { id: 4, text: 'About', link: '/#about' },
+        { id: 5, text: 'Contact', link: '/#contact' },
     ];
 
     const navbar = <div className='justify-between w-[100dvw] z-10 flex items-center'>
@@ -33,7 +33,7 @@ const Navbar = () => {
             </a>
         </div>
 
-        <nav className="relative hidden md:flex flex flex-row gap-4 text-white text-right w-auto absolute font-serif font-medium">
+        <nav className="hidden md:flex flex-row gap-4 text-white text-right w-auto font-serif font-medium">
             {navItems.map(item => (
                 <a
                     key={item.id}
@@ -54,7 +54,7 @@ const Navbar = () => {
 
     return (
 
-        <header className="backdrop-blur-sm  w-[100dvw] h-[13dvh] uppercase fixed flex justify-between p-4 max-w-[1240px] mx-auto">
+        <header className="backdrop-blur-sm backdrop-opacity-80 w-[100dvw] h-[13dvh] uppercase fixed flex justify-between p-4 max-w-[1240px] mx-auto">
 
             {navbar}
 
@@ -68,7 +68,6 @@ const Navbar = () => {
                 }
             >
                 <div className='md:hidden flex flex-row w-[100dvw] h-[20dvh] justify-between p-4'>
-                    {navbar}
                 </div>
 
                 <div className='flex flex-col'>

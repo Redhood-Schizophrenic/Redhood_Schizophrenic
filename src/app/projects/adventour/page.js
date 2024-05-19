@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/Navbar";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 export default function BloodBuddy() {
@@ -63,7 +63,7 @@ export default function BloodBuddy() {
                         <h1 className='text-white uppercase font-extrabold pt-4 text-2xl font-serif'>
                             {item.heading}
                         </h1>
-                        <h2 className='text-white font-medium font-sans text-gray-500 pt-4 text-sm flex flex-wrap'>
+                        <h2 className='font-medium font-sans text-gray-500 pt-4 text-sm flex flex-wrap'>
                             {item.content}
                         </h2>
                     </div>
