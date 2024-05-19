@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp55qoklhtuo95ht92b0",
+  "parentID": "mig_cp55qgs2a0mp8q8v1bmg",
+  "checksum": "1:cf53e244d8fe47876c25442cfdf61e29686156234e567de6553c46625001628c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Contact",
+          "type": "string"
+        },
+        "table": "UserQueries"
+      }
+    }
+  ]
+}

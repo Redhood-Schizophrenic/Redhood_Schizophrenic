@@ -1,12 +1,19 @@
 function SingleLinerContainer({ name, title, items }) {
     return (
         <div id={name} className="flex flex-col gap-6 pt-10 pb-16">
-            <h1 className="uppercase flex justify-center text-2xl font-bold font-sans">{title}</h1>
-            <div className="w-full pt-10 flex flex-col md:flex-row gap-4 justify-center items-center">
+            <h1 className="uppercase flex justify-center items-center text-xl md:text-2xl font-bold font-sans">{title}</h1>
+            <div className="w-full flex flex-wrap flex-row gap-4 justify-center items-center">
                 {
                     items.map(item => (
-                        <div key={item.id} className='p-6 bg-black md:w-[10dvw] md:h-[25dvh] w-auto h-auto border border-red-400 shadow-sm shadow-red-900 flex flex-col justify-center items-center gap-4 overflow-hidden'>
-                            <div className="h-[18dvh] w-full flex justify-center items-center">
+                        <div
+                            key={item.id}
+                            id="wrapper"
+                            className="flex items-center justify-center overflow-hidden"
+                        >
+                            <div
+                                id="image-container"
+                                className="relative w-auto p-4"
+                            >
                                 <div className={item.ImageDivCss}>
                                     <img
                                         src={item.Image}
@@ -14,8 +21,18 @@ function SingleLinerContainer({ name, title, items }) {
                                         className={item.ImageCss}
                                     />
                                 </div>
+                                <div
+                                    id="content"
+                                    className="md:p-10 absolute bg-black/60 w-full 
+                                    flex justify-center items-center
+                                    md:flex-wrap duration-700 
+                                    opacity-0 hover:opacity-100 top-0 left-0 h-full
+                                    flex-col md:text-2xl
+                                    hover:backdrop-blur-sm"
+                                >
+                                    <h1 className={item.TextCss}>{item.Name}</h1>
+                                </div>
                             </div>
-                            <h1 className={item.TextCss}>{item.Name}</h1>
                         </div>
                     ))
                 }
@@ -28,30 +45,53 @@ function DoubleLinerContainer({ name, title, array1, array2 }) {
     return (
         <div id={name} className="flex flex-col gap-6 pt-10 pb-16">
             <h1 className="uppercase flex justify-center items-center text-xl md:text-2xl font-bold font-sans">{title}</h1>
-            <div className="w-full pt-10 flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="w-full flex flex-wrap md:flex-row gap-4 justify-center items-center">
                 {
                     array1.map(logo => (
-                        <div key={logo.id} className='p-6 bg-black md:w-[10dvw] md:h-[25dvh] w-auto h-auto border border-red-400 shadow-sm shadow-red-900 flex flex-col justify-center items-center gap-4 overflow-hidden'>
-                            <div className="h-[18dvh] w-full flex justify-center items-center">
+                        <div
+                            key={logo.id}
+                            id="wrapper"
+                            className="flex items-center justify-center overflow-hidden"
+                        >
+                            <div
+                                id="image-container"
+                                className="relative w-auto p-4"
+                            >
                                 <div className={logo.ImageDivCss}>
                                     <img
                                         src={logo.Image}
                                         alt={logo.Name}
-                                        className={logo.ImageCss}
+                                        className={logo.ImageCss }
                                     />
                                 </div>
+                                <div
+                                    className="md:p-10 absolute bg-black/60 w-full 
+                                    flex justify-center items-center
+                                    md:flex-wrap duration-700 
+                                    opacity-0 hover:opacity-100 top-0 left-0 h-full
+                                    flex-col md:text-2xl
+                                    hover:backdrop-blur-sm"
+                                >
+                                    <h1 className={logo.TextCss}>{logo.Name}</h1>
+                                </div>
                             </div>
-                            <h1 className={logo.TextCss}>{logo.Name}</h1>
                         </div>
                     ))
                 }
 
             </div>
-            <div className="w-full pt-4 flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="w-full pt-4 flex flex-wrap md:flex-row gap-4 justify-center items-center">
                 {
                     array2.map(logo => (
-                        <div key={logo.id} className='p-6 bg-black md:w-[10dvw] md:h-[25dvh] w-auto h-auto border border-red-400 shadow-sm shadow-red-900 flex flex-col justify-center items-center gap-4 overflow-hidden'>
-                            <div className="h-[18dvh] w-full flex justify-center items-center">
+                        <div
+                            key={logo.id}
+                            id="wrapper"
+                            className="flex items-center justify-center overflow-hidden"
+                        >
+                            <div
+                                id="image-container"
+                                className="relative w-auto p-4"
+                            >
                                 <div className={logo.ImageDivCss}>
                                     <img
                                         src={logo.Image}
@@ -59,8 +99,17 @@ function DoubleLinerContainer({ name, title, array1, array2 }) {
                                         className={logo.ImageCss}
                                     />
                                 </div>
+                                <div
+                                    className="md:p-10 absolute bg-black/60 w-full 
+                                    flex justify-center items-center
+                                    md:flex-wrap duration-700 
+                                    opacity-0 hover:opacity-100 top-0 left-0 h-full
+                                    flex-col md:text-2xl
+                                    hover:backdrop-blur-sm"
+                                >
+                                    <h1 className={logo.TextCss}>{logo.Name}</h1>
+                                </div>
                             </div>
-                            <h1 className={logo.TextCss}>{logo.Name}</h1>
                         </div>
                     ))
                 }
@@ -400,8 +449,12 @@ export default function SkillsPage() {
             {/* Actual Div */}
             <main className="w-full h-auto flex flex-col bg-black p-12">
                 <div id="header" className="flex pt-8 w-full items-center flex-col">
-                    <h1 className="uppercase text-3xl font-bold">Skills</h1>
-                    <p className="text-xl text-gray-500">A List of Skills I'm Pro-Efficient in</p>
+                    <h1 className="uppercase text-3xl font-bold">
+                        <span className="text-box rounded-4xl bg-clip-text text-transparent bg-gradient-to-tl from-orange-900 to-red-400">
+                            Skills
+                        </span>
+                    </h1>
+                    <p className="md:text-xl text-sm text-white">A List of Skills I'm Pro-Efficient in</p>
                 </div>
                 <div id="skills">
 

@@ -54,7 +54,7 @@ const Navbar = () => {
 
     return (
 
-        <header className="backdrop-blur-sm backdrop-opacity-80 w-[100dvw] h-[13dvh] uppercase fixed flex justify-between p-4 max-w-[1240px] mx-auto">
+        <header className="backdrop-blur-sm backdrop-opacity-80 w-[100dvw] h-[13dvh] uppercase fixed flex justify-between p-4 max-w-[1240px] mx-auto z-10">
 
             {navbar}
 
@@ -75,11 +75,11 @@ const Navbar = () => {
                     {navItems.map(item => (
                         <a
                             key={item.id}
-                            className='p-4 border-b duration-300 cursor-pointer border-gray-600'
+                            className='p-4 border-b w-full duration-300 cursor-pointer border-gray-600'
                             href={item.link}
 
                         >
-                            <div className='hover:bg-white w-[25dvw] hover:rounded-xl px-4 py-2 duration-300 hover:text-black'>
+                            <div className='hover:bg-white hover:rounded-xl px-4 py-2 duration-300 hover:text-black'>
                                 {item.text}
                             </div>
                         </a>

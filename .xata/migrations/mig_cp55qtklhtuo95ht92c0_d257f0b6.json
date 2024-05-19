@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp55qtklhtuo95ht92c0",
+  "parentID": "mig_cp55qoklhtuo95ht92b0",
+  "checksum": "1:d257f0b6de596a5112e87fd87f119834b0f3474491a0742df3ecc1f7797d7658",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Message",
+          "type": "text"
+        },
+        "table": "UserQueries"
+      }
+    }
+  ]
+}

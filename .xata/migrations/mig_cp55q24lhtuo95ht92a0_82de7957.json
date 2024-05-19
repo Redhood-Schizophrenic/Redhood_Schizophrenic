@@ -1,0 +1,11 @@
+{
+  "id": "mig_cp55q24lhtuo95ht92a0",
+  "checksum": "1:82de7957f5bfe7d095facd6f04959ac0cfb1ea10c74e0b21edd41be7ac1c8dcd",
+  "operations": [
+    {
+      "addTable": {
+        "table": "UserQueries"
+      }
+    }
+  ]
+}

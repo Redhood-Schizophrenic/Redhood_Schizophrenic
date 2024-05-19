@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://RedHood-Schizophrenic-s-workspace-uqsn6r.us-east-1.xata.sh/db/Portfolio",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "cjs"
+  }
+}
